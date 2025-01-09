@@ -38,8 +38,10 @@ namespace Repository.Database
                 builder.Property(c => c.LastName).IsRequired();
                 builder.Property(c => c.LastName2);
                 builder.Property(c => c.Gender).IsRequired();
-                builder.Property(c => c.DateOfBirth).IsRequired();
+                builder.Property(c => c.DateOfBirth).HasColumnType("date").IsRequired();
                 builder.Property(c => c.Email).IsRequired();
+
+                builder.Ignore(x => x.FullName);
 
                 builder.HasMany(c => c.Addresses).WithOne(c => c.Client).HasForeignKey(c => c.ClientId).HasPrincipalKey(c => c.ClientId);
                 builder.HasMany(c => c.Phones).WithOne(c => c.Client).HasForeignKey(c => c.ClientId).HasPrincipalKey(c => c.ClientId);

@@ -2905,11 +2905,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Usuario\\source\\repos\\PruebaTecnica\\Repository\\Repository.csproj",
+      "projectUniqueName": "C:\\Users\\Usuario\\OneDrive - INSTITUTO TECNOLOGICO METROPOLITANO - ITM\\Documents\\cfa\\cfa\\Repository\\Repository.csproj",
       "projectName": "Repository",
-      "projectPath": "C:\\Users\\Usuario\\source\\repos\\PruebaTecnica\\Repository\\Repository.csproj",
+      "projectPath": "C:\\Users\\Usuario\\OneDrive - INSTITUTO TECNOLOGICO METROPOLITANO - ITM\\Documents\\cfa\\cfa\\Repository\\Repository.csproj",
       "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Usuario\\source\\repos\\PruebaTecnica\\Repository\\obj\\",
+      "outputPath": "C:\\Users\\Usuario\\OneDrive - INSTITUTO TECNOLOGICO METROPOLITANO - ITM\\Documents\\cfa\\cfa\\Repository\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2931,8 +2931,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\Usuario\\source\\repos\\PruebaTecnica\\Domain\\Domain.csproj": {
-              "projectPath": "C:\\Users\\Usuario\\source\\repos\\PruebaTecnica\\Domain\\Domain.csproj"
+            "C:\\Users\\Usuario\\OneDrive - INSTITUTO TECNOLOGICO METROPOLITANO - ITM\\Documents\\cfa\\cfa\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Users\\Usuario\\OneDrive - INSTITUTO TECNOLOGICO METROPOLITANO - ITM\\Documents\\cfa\\cfa\\Domain\\Domain.csproj"
             }
           }
         }

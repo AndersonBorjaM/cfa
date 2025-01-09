@@ -53,6 +53,102 @@
         }
       }
     },
+    "/Client/Update": {
+      "patch": {
+        "tags": [
+          "Client"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateClientRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateClientRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateClientRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Client"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Client"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Client"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Client/Delete": {
+      "post": {
+        "tags": [
+          "Client"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeleteClientRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeleteClientRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeleteClientRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/Client/GetAll": {
       "get": {
         "tags": [
@@ -83,6 +179,177 @@
                   "type": "array",
                   "items": {
                     "$ref": "#/components/schemas/Client"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Client/Filters": {
+      "post": {
+        "tags": [
+          "Client"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FiltersClientRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FiltersClientRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/FiltersClientRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Client"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Client"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Client"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Client/PropertiesClient": {
+      "get": {
+        "tags": [
+          "Client"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PropertiesClientResponse"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PropertiesClientResponse"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PropertiesClientResponse"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Client/ClientFilterPhone": {
+      "get": {
+        "tags": [
+          "Client"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ClientFilterPhoneResponse"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ClientFilterPhoneResponse"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ClientFilterPhoneResponse"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Client/GetAddressAndFullNameClientAsync": {
+      "get": {
+        "tags": [
+          "Client"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FilterAddressClientResponse"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FilterAddressClientResponse"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FilterAddressClientResponse"
                   }
                 }
               }
@@ -151,9 +418,6 @@
           "addressType": {
             "type": "string",
             "nullable": true
-          },
-          "client": {
-            "$ref": "#/components/schemas/Client"
           }
         },
         "additionalProperties": false
@@ -161,11 +425,11 @@
       "AddressRequest": {
         "type": "object",
         "properties": {
-          "addressText": {
+          "tipoDireccion": {
             "type": "string",
             "nullable": true
           },
-          "addressType": {
+          "direccion": {
             "type": "string",
             "nullable": true
           }
@@ -185,7 +449,7 @@
           },
           "document": {
             "type": "integer",
-            "format": "int32"
+            "format": "int64"
           },
           "name": {
             "type": "string",
@@ -198,6 +462,11 @@
           "lastName2": {
             "type": "string",
             "nullable": true
+          },
+          "fullName": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
           },
           "gender": {
             "type": "string",
@@ -228,45 +497,59 @@
         },
         "additionalProperties": false
       },
+      "ClientFilterPhoneResponse": {
+        "type": "object",
+        "properties": {
+          "fullName": {
+            "type": "string",
+            "nullable": true
+          },
+          "totalPhones": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
       "ClientRequest": {
         "type": "object",
         "properties": {
-          "Tipo documento": {
+          "tipoDocumento": {
             "type": "string",
             "nullable": true
           },
-          "Documento": {
+          "documento": {
             "type": "integer",
-            "format": "int32"
+            "format": "int64"
           },
-          "Nombres": {
+          "nombres": {
             "type": "string",
             "nullable": true
           },
-          "Apellido 1": {
+          "apellido1": {
             "type": "string",
             "nullable": true
           },
-          "Apellido 2": {
+          "apellido2": {
             "type": "string",
             "nullable": true
           },
-          "Genero": {
+          "genero": {
             "type": "string",
             "nullable": true
           },
-          "Fecha de nacimiento": {
+          "fechaNacimiento": {
             "type": "string",
             "format": "date-time"
           },
-          "Direcciones": {
+          "direcciones": {
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/AddressRequest"
             },
             "nullable": true
           },
-          "Teléfonos": {
+          "telefonos": {
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/PhoneRequest"
@@ -275,6 +558,65 @@
           },
           "email": {
             "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DeleteClientRequest": {
+        "type": "object",
+        "properties": {
+          "tipoDocumento": {
+            "type": "string",
+            "nullable": true
+          },
+          "documento": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "additionalProperties": false
+      },
+      "FilterAddressClientResponse": {
+        "type": "object",
+        "properties": {
+          "fullName": {
+            "type": "string",
+            "nullable": true
+          },
+          "addressText": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FiltersClientRequest": {
+        "type": "object",
+        "properties": {
+          "nombrePropiedad": {
+            "type": "string",
+            "nullable": true
+          },
+          "valorPropiedad": {
+            "type": "string",
+            "nullable": true
+          },
+          "ordernarPor": {
+            "type": "string",
+            "nullable": true
+          },
+          "ordenarAscendente": {
+            "type": "boolean"
+          },
+          "fechaInicio": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "fechaFin": {
+            "type": "string",
+            "format": "date-time",
             "nullable": true
           }
         },
@@ -298,9 +640,6 @@
           "phoneNumber": {
             "type": "integer",
             "format": "int64"
-          },
-          "client": {
-            "$ref": "#/components/schemas/Client"
           }
         },
         "additionalProperties": false
@@ -308,13 +647,49 @@
       "PhoneRequest": {
         "type": "object",
         "properties": {
-          "phoneType": {
+          "tipoContacto": {
             "type": "string",
             "nullable": true
           },
-          "phoneNumber": {
+          "numeroTelefono": {
             "type": "integer",
             "format": "int64"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PropertiesClientResponse": {
+        "type": "object",
+        "properties": {
+          "propertyName": {
+            "type": "string",
+            "nullable": true
+          },
+          "propertyType": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateClientRequest": {
+        "type": "object",
+        "properties": {
+          "codigo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "tipoDocumento": {
+            "type": "string",
+            "nullable": true
+          },
+          "documento": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "fechaNacimiento": {
+            "type": "string",
+            "format": "date-time"
           }
         },
         "additionalProperties": false

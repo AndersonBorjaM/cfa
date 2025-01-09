@@ -1,34 +1,28 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Text.Json.Serialization;
-using System.Threading.Tasks;
-using Domain.DTO;
+﻿using System.Text.Json.Serialization;
 
 namespace Domain.Request
 {
     public class ClientRequest
     {
-        [JsonPropertyName("Tipo documento")]
+        [JsonPropertyName("tipoDocumento")]
         public string DocumentType { get; set; }
-        [JsonPropertyName("Documento")]
+        [JsonPropertyName("documento")]
         public long Document { get; set; }
-        [JsonPropertyName("Nombres")]
+        [JsonPropertyName("nombres")]
         public string Name { get; set; }
-        [JsonPropertyName("Apellido 1")]
+        [JsonPropertyName("apellido1")]
         public string LastName { get; set; }
-        [JsonPropertyName("Apellido 2")]
+        [JsonPropertyName("apellido2")]
         public string LastName2 { get; set; }
-        [JsonPropertyName("Genero")]
+        [JsonPropertyName("genero")]
         public string Gender { get; set; }
-        [JsonPropertyName("Fecha de nacimiento")]
+        [JsonPropertyName("fechaNacimiento")]
         public DateTime DateOfBirth { get; set; }
-        [JsonPropertyName("Direcciones")]
+        [JsonPropertyName("direcciones")]
         public List<AddressRequest> Addresses { get; set; }
-        [JsonPropertyName("Teléfonos")]
+        [JsonPropertyName("telefonos")]
         public List<PhoneRequest> Phones { get; set; }
-        [JsonPropertyName("Email")]
+        [JsonPropertyName("email")]
         public string Email { get; set; }
 
     }

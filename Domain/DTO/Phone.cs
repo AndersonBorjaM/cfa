@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Text.Json.Serialization;
 
 namespace Domain.DTO
 {
@@ -12,7 +8,7 @@ namespace Domain.DTO
         public int ClientId { get; set; }
         public string PhoneType { get; set; }
         public long PhoneNumber { get; set; }
-
+        [JsonIgnore]
         public virtual Client Client { get; set; }
         
     }

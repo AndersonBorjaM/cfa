@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace Domain.DTO
@@ -18,6 +19,7 @@ namespace Domain.DTO
         public string AddressText { get; set; }
         public string AddressType { get; set; }
 
+        [JsonIgnore]
         public virtual Client Client { get; set; }
     }
 }

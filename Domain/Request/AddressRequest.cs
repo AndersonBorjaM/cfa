@@ -9,9 +9,9 @@ namespace Domain.Request
 {
     public class AddressRequest
     {
-        [JsonPropertyName("Tipo dirección")]
+        [JsonPropertyName("tipoDireccion")]
         public string AddressType { get; set; }
-        [JsonPropertyName("Dirección")]
+        [JsonPropertyName("direccion")]
         public string AddressText { get; set; }
 
     }

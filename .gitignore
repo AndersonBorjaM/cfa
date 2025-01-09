@@ -1,0 +1,69 @@
+# Logs
+*.log
+*.tlog
+
+# Compilación
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+x64/
+x86/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+
+# Archivos generados por Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Paquetes
+packages/
+*.nupkg
+*.snupkg
+
+# Configuración de la depuración
+*.launchSettings.json
+
+# Archivos de caché
+*.pidb
+*.cache
+*.tmp
+
+# Archivos de publicación
+publish/
+wwwroot/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Archivos de la herramienta de generación de cobertura de código
+coverage/
+*.coverage
+*.coveragexml
+
+# Archivos de dependencias locales
+project.lock.json
+global.json
+
+# Archivos de configuración de la herramienta dotnet
+*.dotnet-tools.json
+
+# Archivos relacionados con Rider y ReSharper
+.idea/
+*.sln.iml
+
+# Archivos específicos del contenedor
+docker-compose.override.yml
+
+# Archivos de configuración del IDE
+*.ipch
+*.aps
+*.pdb
+
+# Archivos temporales y de pruebas
+TestResults/

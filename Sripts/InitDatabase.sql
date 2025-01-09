@@ -23,3 +23,20 @@ ClientId INT FOREIGN KEY REFERENCES Client(ClientId) NOT NULL,
 PhoneType VARCHAR(250) NOT NULL,
 PhoneNumber BIGINT NOT NULL
 )
+
+CREATE PROCEDURE SP_GetAddressClient 
+AS
+BEGIN
+    SELECT CONCAT(CL.Name,' ', CL.LastName, ' ', CL.LastName2) FullName, AD.AddressText 
+	FROM Client AS CL
+	LEFT JOIN 
+        (SELECT 
+             ClientId,
+             AddressText,
+             ROW_NUMBER() OVER (PARTITION BY ClientId ORDER BY AddressId ASC) AS RowNum
+         FROM 
+             Address
+        ) AD
+	ON AD.ClientId = CL.ClientId AND  AD.RowNum = 1
+	WHERE (SELECT COUNT(AddressId) FROM Address WHERE ClientId = CL.ClientId) >1
+END;

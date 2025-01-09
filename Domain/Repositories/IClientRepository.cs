@@ -1,5 +1,6 @@
 ﻿using Domain.Base;
 using Domain.DTO;
+using Domain.Response;
 
 namespace Domain.Repositories
 {
@@ -9,6 +10,6 @@ namespace Domain.Repositories
 
         Task<Client> GetByDocumentAndDocumentTypeAsync(long document, string documentType);
 
-        Task<Client> CreateClientSpAsync(Client client);
+        Task<IEnumerable<FilterAddressClientResponse>> GetAddressAndFullNameClientAsync();
     }
 }

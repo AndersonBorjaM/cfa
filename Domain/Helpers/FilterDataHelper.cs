@@ -18,19 +18,32 @@ namespace Domain.Helpers
             var parameter = Expression.Parameter(typeof(T), "x");
             Expression predicate = null;
 
-            if (filter.PropertyType.ToLower() == "string")
+            var propertyType = typeof(T).GetProperty(filter.PropertyName).PropertyType;
+
+
+            if (propertyType.Name.ToLower().Contains("string") || propertyType.Name.ToLower().Contains("int"))
             {
                 var property = Expression.Property(parameter, filter.PropertyName);
-                var value = Expression.Constant(filter.PropertyValue);
-                var containsMethod = typeof(string).GetMethod("Contains", new[] { typeof(string) });
-                predicate = Expression.Call(property, containsMethod, value);
+
+                if (propertyType.Name.ToLower().Contains("int"))
+                {
+                    var toStringMethod = propertyType.GetMethod("ToString", Type.EmptyTypes);
+                    var propertyToString = Expression.Call(property, toStringMethod);
+
+                    var value = Expression.Constant(filter.PropertyValue.ToLower());
+                    var containsMethod = typeof(string).GetMethod("Contains", new[] { typeof(string) });
+                    predicate = Expression.Call(propertyToString, containsMethod, value);
+                }
+                else { 
+                    var toLowerMethod = typeof(string).GetMethod("ToLower", Type.EmptyTypes);
+                    var propertyToLower = Expression.Call(property, toLowerMethod);
+
+                    var value = Expression.Constant(filter.PropertyValue.ToLower());
+                    var containsMethod = typeof(string).GetMethod("Contains", new[] { typeof(string) });
+                    predicate = Expression.Call(propertyToLower, containsMethod, value);
+                }
             }
-            else if (filter.PropertyType.ToLower() == "int" || filter.PropertyType.ToLower() == "long") {
-                var property = Expression.Property(parameter, filter.PropertyName);
-                var value = Expression.Constant(filter.PropertyValue);
-                predicate = Expression.Equal(property, value);
-            }
-            else if (filter.PropertyType.ToLower().Contains("date"))
+            else if (propertyType.Name.ToLower().Contains("date"))
             {
                 var property = Expression.Property(parameter, filter.PropertyName);
                 var startDate = Expression.Constant(filter.StartDate);

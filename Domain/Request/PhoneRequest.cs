@@ -9,9 +9,9 @@ namespace Domain.Request
 {
     public class PhoneRequest
     {
-        [JsonPropertyName("Tipo contacto")]
+        [JsonPropertyName("tipoContacto")]
         public string PhoneType { get; set; }
-        [JsonPropertyName("Número de telefono")]
+        [JsonPropertyName("numeroTelefono")]
         public long PhoneNumber { get; set; }
     }
 }

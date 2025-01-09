@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jBd6MF3ehms=",
+  "dgSpecHash": "0hMhIKNcmKI=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Usuario\\source\\repos\\PruebaTecnica\\WebApi\\WebApi.csproj",
+  "projectFilePath": "C:\\Users\\Usuario\\OneDrive - INSTITUTO TECNOLOGICO METROPOLITANO - ITM\\Documents\\cfa\\cfa\\WebApi\\WebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Usuario\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\Usuario\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",

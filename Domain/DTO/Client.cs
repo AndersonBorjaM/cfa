@@ -16,6 +16,7 @@ namespace Domain.DTO
         public string Name { get; set; }
         public string LastName { get; set; }
         public string LastName2 { get; set; }
+        public string FullName { get { return $"{this.Name} {this.LastName} {this.LastName2}"; } }
         public string Gender { get; set; }
         public DateTime DateOfBirth { get; set; }
         public List<Address> Addresses { get; set; }
